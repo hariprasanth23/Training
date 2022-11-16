@@ -39,6 +39,4 @@ public class CarController {
         System.out.println("Deleting Car Records"+id);
         return "Deleted Car Successfully";
     }
-
-
 }
