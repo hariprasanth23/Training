@@ -35,7 +35,8 @@ public class InsuranceController {
     @GetMapping("/getPolicy/{policyNumber}")
     public List<Insurance> getAllPoliciesGreaterThan(@PathVariable int policyNumber){
         System.out.println("The total policies are"+ insuranceRepository.count());
-        List<Insurance> insuranceListGreaterThan = insuranceRepository.findByPolicyNumberGreaterThanAndPayMethod(policyNumber,"Montly");
+        List<Insurance> insuranceListGreaterThan =
+                insuranceRepository.findByPolicyNumberGreaterThanAndPayMethod(policyNumber,"Montly");
         return insuranceListGreaterThan;
     }
 
